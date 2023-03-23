@@ -1,0 +1,68 @@
+﻿@model mvcMobileStore.Models.SanPham
+
+
+@{
+    ViewBag.Title = "Chitietsanpham";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>THÔNG TIN CHI TIẾT SẢN PHẨM</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MANCC)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MANCC)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaNPP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaNPP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TENSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIABAN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIABAN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaDong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaDong)
+        </dd>
+
+        <dd>
+            <img src="@Url.Content("~/Hinhsanpham/" + Model.AnhSP)" width="50%"/>
+
+        </dd>
+
+        <dd>
+            @Html.DisplayFor(model => model.TENSP)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("ĐIỀU CHỈNH", "SuaSP", new { id = Model.MASP }) |
+    @Html.ActionLink("TRỞ VỀ", "sanpham")
+</p>
